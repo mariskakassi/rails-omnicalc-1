@@ -38,14 +38,14 @@
       Principal
     </dt>
     <dd>
-      $<%= format('%<d>0.2f', d: @princi) %>
+      $<%= @princi.to_fs(:currency) %>
     </dd>
 
     <dt>
       Payment
     </dt>
     <dd>
-      $<%= format('%<d>0.2f', d: @pay) %>
+      $<%= @pay.to_fs(:currency) %>
     </dd>
   </dl>
   <a href="/payment/new">Calculate another payment</a>
