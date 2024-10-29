@@ -1,0 +1,38 @@
+<% if @calc_type == "square_root"%>
+  <form action="/square_root/results">
+    <label for="number_id">Enter a number</label><br>
+    <input id="number_id" name="number" placeholder="What number do you want to take the square root of?"><br>
+    
+    <button>Calculate square root</button>
+  </form>
+<% elsif @calc_type == "payment"%>
+  <form action="/payment/results">
+    <label for="apr_id">APR</label>
+    <input id="apr_id" name="apr" placeholder="E.g. 5.42"><br>
+
+    <label for="years_id">Number of years</label>
+    <input id="years_id" name="years" placeholder="How many years to repay?"><br>
+
+    <label for="principal_id">Principal</label>
+    <input id="principal_id" name="principal" placeholder="How much principal?"><br>
+    
+    <button>Calculate monthly payment</button>
+  </form>
+<% elsif @calc_type == "random"%>
+  <form action="/random/results">
+    <label for="min_id">Minimum</label>
+    <input id="min_id" name="min" placeholder="E.g. 1.5"><br>
+    
+    <label for="max_id">Maximum</label>
+    <input id="max_id" name="max" placeholder="E.g. 4.5"><br>
+    
+    <button>Pick random number</button>
+  </form>
+<% else #@calc_type == "square" %>
+  <form action="/square/results">
+    <label for="number_id">Enter a number</label><br>
+    <input id="number_id" name="number" placeholder="What number do you want to take the square of?"><br>
+    
+    <button>Calculate square</button>
+  </form>
+<% end %>

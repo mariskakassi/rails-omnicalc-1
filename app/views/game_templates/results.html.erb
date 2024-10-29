@@ -1,0 +1,96 @@
+<% if @calc_type == "square_root"%>
+  <h1>Square Root Results</h2>
+  <dl>
+    <dt>
+      Number
+    </dt>
+    <dd>
+      <%= @num %>
+    </dd>
+
+    <dt>
+      Square Root
+    </dt>
+    <dd>
+      <%= @result %>
+    </dd>
+  </dl>
+  <a href="/square_root/new">Calculate another square root</a>
+
+<% elsif @calc_type == "payment"%>
+  <h1>Payment Results</h2>
+  <dl>
+    <dt>
+      APR
+    </dt>
+    <dd>
+      <%= format('%<d>0.4f', d: @apr) %>%
+    </dd>
+
+    <dt>
+      Number of years
+    </dt>
+    <dd>
+      <%= @yrs %>
+    </dd>
+
+    <dt>
+      Principal
+    </dt>
+    <dd>
+      $<%= format('%<d>0.2f', d: @princi) %>
+    </dd>
+
+    <dt>
+      Payment
+    </dt>
+    <dd>
+      $<%= format('%<d>0.2f', d: @pay) %>
+    </dd>
+  </dl>
+  <a href="/payment/new">Calculate another payment</a>
+
+<% elsif @calc_type == "random"%>
+  <h1>Random Results</h2>
+  <dl>
+    <dt>
+      Minimum
+    </dt>
+    <dd>
+      <%= @min %>
+    </dd>
+
+    <dt>
+      Maximum
+    </dt>
+    <dd>
+      <%= @max %>
+    </dd>
+    <dt>
+      Random Number
+    </dt>
+    <dd>
+      <%= @result %>
+    </dd>
+  </dl>
+  <a href="/random/new">Pick another random number</a>
+
+<% else #@calc_type == "square" %>
+  <h1>Square Results</h2>
+  <dl>
+    <dt>
+      Number
+    </dt>
+    <dd>
+      <%= @num %>
+    </dd>
+
+    <dt>
+      Square
+    </dt>
+    <dd>
+      <%= @result %>
+    </dd>
+  </dl>
+  <a href="/square/new">Calculate another square</a>
+<% end %>
